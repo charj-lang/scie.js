@@ -117,3 +117,4 @@ dist
 .idea
 *.json
 !*.tmLanguage.json
+!testdata/*.json
