@@ -15,8 +15,12 @@ function readFile(path) {
 const wasmBin = fs.readFileSync(path.join(__dirname, './node_modules/vscode-oniguruma/release/onig.wasm')).buffer;
 const vscodeOnigurumaLib = oniguruma.loadWASM(wasmBin).then(() => {
     return {
-        createOnigScanner(patterns) { return new oniguruma.OnigScanner(patterns); },
-        createOnigString(s) { return new oniguruma.OnigString(s); }
+        createOnigScanner(patterns) {
+            return new oniguruma.OnigScanner(patterns);
+        },
+        createOnigString(s) {
+            return new oniguruma.OnigString(s);
+        }
     };
 });
 
@@ -42,17 +46,27 @@ int main(){
 }
 `.split("\n");
     let ruleStack = vsctm.INITIAL;
+    let results = {
+        path: '',
+        name: 'helloworld.c',
+        elements: []
+    };
     for (let i = 0; i < text.length; i++) {
         const line = text[i];
         const lineTokens = grammar.tokenizeLine(line, ruleStack);
-        console.log(`\nTokenizing line: ${line}`);
         for (let j = 0; j < lineTokens.tokens.length; j++) {
             const token = lineTokens.tokens[j];
-            console.log(` - token from ${token.startIndex} to ${token.endIndex} ` +
-                `(${line.substring(token.startIndex, token.endIndex)}) ` +
-                `with scopes ${token.scopes.join(', ')}`
-            );
+            let value = line.substring(token.startIndex, token.endIndex);
+            results.elements.push({
+                line_num: j + 1,
+                start_index: token.startIndex,
+                end_index: token.endIndex,
+                value: value,
+                scopes: token.scopes
+            })
         }
         ruleStack = lineTokens.ruleStack;
     }
+
+    fs.writeFileSync("scie.json", JSON.stringify(results));
 });
