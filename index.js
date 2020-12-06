@@ -59,7 +59,7 @@ int main(){
             const token = lineTokens.tokens[j];
             let value = line.substring(token.startIndex, token.endIndex);
             results.elements.push({
-                line_num: j + 1,
+                line_num: i + 1,
                 start_index: token.startIndex,
                 end_index: token.endIndex,
                 value: value,
