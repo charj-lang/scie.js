@@ -58,9 +58,11 @@ int main (int argc, const char * argv[]) {
         for (let j = 0; j < lineTokens.tokens.length; j++) {
             const token = lineTokens.tokens[j];
             let value = line.substring(token.startIndex, token.endIndex);
+            let lineNum = i + 1;
             results.elements.push({
-                line_num: i + 1,
+                line_num: lineNum,
                 start_index: token.startIndex,
+                pos: `${lineNum}:${token.startIndex}-${token.endIndex}`,
                 end_index: token.endIndex,
                 value: value,
                 scopes: token.scopes

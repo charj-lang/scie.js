@@ -5,6 +5,7 @@
     {
       "line_num": 1,
       "start_index": 0,
+      "pos": "1:0-1",
       "end_index": 1,
       "value": "#",
       "scopes": [
@@ -17,6 +18,7 @@
     {
       "line_num": 1,
       "start_index": 1,
+      "pos": "1:1-8",
       "end_index": 8,
       "value": "include",
       "scopes": [
@@ -28,6 +30,7 @@
     {
       "line_num": 1,
       "start_index": 8,
+      "pos": "1:8-9",
       "end_index": 9,
       "value": " ",
       "scopes": [
@@ -38,6 +41,7 @@
     {
       "line_num": 1,
       "start_index": 9,
+      "pos": "1:9-10",
       "end_index": 10,
       "value": "<",
       "scopes": [
@@ -50,6 +54,7 @@
     {
       "line_num": 1,
       "start_index": 10,
+      "pos": "1:10-17",
       "end_index": 17,
       "value": "stdio.h",
       "scopes": [
@@ -61,6 +66,7 @@
     {
       "line_num": 1,
       "start_index": 17,
+      "pos": "1:17-18",
       "end_index": 18,
       "value": ">",
       "scopes": [
@@ -73,6 +79,7 @@
     {
       "line_num": 2,
       "start_index": 0,
+      "pos": "2:0-3",
       "end_index": 3,
       "value": "int",
       "scopes": [
@@ -83,6 +90,7 @@
     {
       "line_num": 2,
       "start_index": 3,
+      "pos": "2:3-4",
       "end_index": 4,
       "value": " ",
       "scopes": [
@@ -92,6 +100,7 @@
     {
       "line_num": 2,
       "start_index": 4,
+      "pos": "2:4-8",
       "end_index": 8,
       "value": "main",
       "scopes": [
@@ -104,6 +113,7 @@
     {
       "line_num": 2,
       "start_index": 8,
+      "pos": "2:8-9",
       "end_index": 9,
       "value": " ",
       "scopes": [
@@ -115,6 +125,7 @@
     {
       "line_num": 2,
       "start_index": 9,
+      "pos": "2:9-10",
       "end_index": 10,
       "value": "(",
       "scopes": [
@@ -127,6 +138,7 @@
     {
       "line_num": 2,
       "start_index": 10,
+      "pos": "2:10-13",
       "end_index": 13,
       "value": "int",
       "scopes": [
@@ -139,6 +151,7 @@
     {
       "line_num": 2,
       "start_index": 13,
+      "pos": "2:13-14",
       "end_index": 14,
       "value": " ",
       "scopes": [
@@ -150,6 +163,7 @@
     {
       "line_num": 2,
       "start_index": 14,
+      "pos": "2:14-18",
       "end_index": 18,
       "value": "argc",
       "scopes": [
@@ -162,6 +176,7 @@
     {
       "line_num": 2,
       "start_index": 18,
+      "pos": "2:18-19",
       "end_index": 19,
       "value": ",",
       "scopes": [
@@ -174,6 +189,7 @@
     {
       "line_num": 2,
       "start_index": 19,
+      "pos": "2:19-20",
       "end_index": 20,
       "value": " ",
       "scopes": [
@@ -185,6 +201,7 @@
     {
       "line_num": 2,
       "start_index": 20,
+      "pos": "2:20-25",
       "end_index": 25,
       "value": "const",
       "scopes": [
@@ -197,6 +214,7 @@
     {
       "line_num": 2,
       "start_index": 25,
+      "pos": "2:25-26",
       "end_index": 26,
       "value": " ",
       "scopes": [
@@ -208,6 +226,7 @@
     {
       "line_num": 2,
       "start_index": 26,
+      "pos": "2:26-30",
       "end_index": 30,
       "value": "char",
       "scopes": [
@@ -220,6 +239,7 @@
     {
       "line_num": 2,
       "start_index": 30,
+      "pos": "2:30-31",
       "end_index": 31,
       "value": " ",
       "scopes": [
@@ -231,6 +251,7 @@
     {
       "line_num": 2,
       "start_index": 31,
+      "pos": "2:31-32",
       "end_index": 32,
       "value": "*",
       "scopes": [
@@ -243,6 +264,7 @@
     {
       "line_num": 2,
       "start_index": 32,
+      "pos": "2:32-33",
       "end_index": 33,
       "value": " ",
       "scopes": [
@@ -254,6 +276,7 @@
     {
       "line_num": 2,
       "start_index": 33,
+      "pos": "2:33-37",
       "end_index": 37,
       "value": "argv",
       "scopes": [
@@ -266,6 +289,7 @@
     {
       "line_num": 2,
       "start_index": 37,
+      "pos": "2:37-39",
       "end_index": 39,
       "value": "[]",
       "scopes": [
@@ -278,6 +302,7 @@
     {
       "line_num": 2,
       "start_index": 39,
+      "pos": "2:39-40",
       "end_index": 40,
       "value": ")",
       "scopes": [
@@ -290,6 +315,7 @@
     {
       "line_num": 2,
       "start_index": 40,
+      "pos": "2:40-41",
       "end_index": 41,
       "value": " ",
       "scopes": [
@@ -299,6 +325,7 @@
     {
       "line_num": 2,
       "start_index": 41,
+      "pos": "2:41-42",
       "end_index": 42,
       "value": "{",
       "scopes": [
@@ -310,6 +337,7 @@
     {
       "line_num": 3,
       "start_index": 0,
+      "pos": "3:0-4",
       "end_index": 4,
       "value": "    ",
       "scopes": [
@@ -320,6 +348,7 @@
     {
       "line_num": 3,
       "start_index": 4,
+      "pos": "3:4-10",
       "end_index": 10,
       "value": "printf",
       "scopes": [
@@ -332,6 +361,7 @@
     {
       "line_num": 3,
       "start_index": 10,
+      "pos": "3:10-11",
       "end_index": 11,
       "value": "(",
       "scopes": [
@@ -344,6 +374,7 @@
     {
       "line_num": 3,
       "start_index": 11,
+      "pos": "3:11-12",
       "end_index": 12,
       "value": "\"",
       "scopes": [
@@ -357,6 +388,7 @@
     {
       "line_num": 3,
       "start_index": 12,
+      "pos": "3:12-25",
       "end_index": 25,
       "value": "Hello, World!",
       "scopes": [
@@ -369,6 +401,7 @@
     {
       "line_num": 3,
       "start_index": 25,
+      "pos": "3:25-26",
       "end_index": 26,
       "value": "\"",
       "scopes": [
@@ -382,6 +415,7 @@
     {
       "line_num": 3,
       "start_index": 26,
+      "pos": "3:26-27",
       "end_index": 27,
       "value": ")",
       "scopes": [
@@ -394,6 +428,7 @@
     {
       "line_num": 3,
       "start_index": 27,
+      "pos": "3:27-28",
       "end_index": 28,
       "value": ";",
       "scopes": [
@@ -405,6 +440,7 @@
     {
       "line_num": 4,
       "start_index": 0,
+      "pos": "4:0-4",
       "end_index": 4,
       "value": "    ",
       "scopes": [
@@ -415,6 +451,7 @@
     {
       "line_num": 4,
       "start_index": 4,
+      "pos": "4:4-10",
       "end_index": 10,
       "value": "return",
       "scopes": [
@@ -426,6 +463,7 @@
     {
       "line_num": 4,
       "start_index": 10,
+      "pos": "4:10-11",
       "end_index": 11,
       "value": " ",
       "scopes": [
@@ -436,6 +474,7 @@
     {
       "line_num": 4,
       "start_index": 11,
+      "pos": "4:11-12",
       "end_index": 12,
       "value": "0",
       "scopes": [
@@ -447,6 +486,7 @@
     {
       "line_num": 4,
       "start_index": 12,
+      "pos": "4:12-13",
       "end_index": 13,
       "value": ";",
       "scopes": [
@@ -458,6 +498,7 @@
     {
       "line_num": 5,
       "start_index": 0,
+      "pos": "5:0-1",
       "end_index": 1,
       "value": "}",
       "scopes": [
@@ -469,6 +510,7 @@
     {
       "line_num": 6,
       "start_index": 0,
+      "pos": "6:0-1",
       "end_index": 1,
       "value": "",
       "scopes": [
