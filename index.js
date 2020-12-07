@@ -41,7 +41,7 @@ const registry = new vsctm.Registry({
 // Load the JavaScript grammar and any other grammars included by it async.
 registry.loadGrammar('source.c').then(grammar => {
     const text = `#include <stdio.h>
-int main(){
+int main (int argc, const char * argv[]) {
     printf("Hello, World!");
     return 0;
 }
