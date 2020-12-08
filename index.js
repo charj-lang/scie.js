@@ -28,10 +28,10 @@ const vscodeOnigurumaLib = oniguruma.loadWASM(wasmBin).then(() => {
 const registry = new vsctm.Registry({
     onigLib: vscodeOnigurumaLib,
     loadGrammar: (scopeName) => {
-        if (scopeName === 'source.c') {
+        if (scopeName === 'source.go') {
             // https://github.com/textmate/javascript.tmbundle/blob/master/Syntaxes/JavaScript.plist
             // return readFile('./extensions/C.plist').then(data => vsctm.parseRawGrammar(data.toString()))
-            return readFile('./extensions/c.tmLanguage.json').then(data => vsctm.parseRawGrammar(data.toString(), "c.json"))
+            return readFile('./extensions/go.tmLanguage.json').then(data => vsctm.parseRawGrammar(data.toString(), "go.json"))
         }
         console.log(`Unknown scope name: ${scopeName}`);
         return null;
@@ -39,11 +39,13 @@ const registry = new vsctm.Registry({
 });
 
 // Load the JavaScript grammar and any other grammars included by it async.
-registry.loadGrammar('source.c').then(grammar => {
-    const text = `#include <stdio.h>
-int main (int argc, const char * argv[]) {
-    printf("Hello, World!");
-    return 0;
+registry.loadGrammar('source.go').then(grammar => {
+    const text = `package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("hello world")
 }
 `.split("\n");
     let ruleStack = vsctm.INITIAL;
@@ -59,14 +61,17 @@ int main (int argc, const char * argv[]) {
             const token = lineTokens.tokens[j];
             let value = line.substring(token.startIndex, token.endIndex);
             let lineNum = i + 1;
+            let pos = `${lineNum}:${token.startIndex}-${token.endIndex}`;
             results.elements.push({
                 line_num: lineNum,
                 start_index: token.startIndex,
-                pos: `${lineNum}:${token.startIndex}-${token.endIndex}`,
+                pos: pos,
                 end_index: token.endIndex,
                 value: value,
                 scopes: token.scopes
             })
+
+            console.log(`<${value}>  ${token.scopes.join(",")}`)
         }
         ruleStack = lineTokens.ruleStack;
     }
