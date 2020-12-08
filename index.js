@@ -70,7 +70,7 @@ func main() {
                 scopes: token.scopes
             })
 
-            // console.log(`| pos | ${value} | ${token.scopes.join(",")} |`)
+            console.log(`| ${pos} | ${value} | ${token.scopes.join(",")} |`)
         }
         ruleStack = lineTokens.ruleStack;
     }
