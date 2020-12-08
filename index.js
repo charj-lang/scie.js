@@ -28,9 +28,9 @@ const vscodeOnigurumaLib = oniguruma.loadWASM(wasmBin).then(() => {
 const registry = new vsctm.Registry({
     onigLib: vscodeOnigurumaLib,
     loadGrammar: (scopeName) => {
-        if (scopeName === 'source.go') {
+        if (scopeName === 'source.c') {
             // https://github.com/textmate/javascript.tmbundle/blob/master/Syntaxes/JavaScript.plist
-            return readFile('./extensions/go.tmLanguage.json').then(data => vsctm.parseRawGrammar(data.toString(), "go.json"))
+            return readFile('./extensions/c.tmLanguage.json').then(data => vsctm.parseRawGrammar(data.toString(), "c.json"))
         }
         console.log(`Unknown scope name: ${scopeName}`);
         return null;
@@ -38,13 +38,11 @@ const registry = new vsctm.Registry({
 });
 
 // Load the JavaScript grammar and any other grammars included by it async.
-registry.loadGrammar('source.go').then(grammar => {
-    const text = `package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("hello world")
+registry.loadGrammar('source.c').then(grammar => {
+    const text = `#include <stdio.h>
+int main(){
+    printf("Hello, World!");
+    return 0;
 }
 `.split("\n");
     let ruleStack = vsctm.INITIAL;
