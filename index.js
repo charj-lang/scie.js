@@ -30,7 +30,6 @@ const registry = new vsctm.Registry({
     loadGrammar: (scopeName) => {
         if (scopeName === 'source.go') {
             // https://github.com/textmate/javascript.tmbundle/blob/master/Syntaxes/JavaScript.plist
-            // return readFile('./extensions/C.plist').then(data => vsctm.parseRawGrammar(data.toString()))
             return readFile('./extensions/go.tmLanguage.json').then(data => vsctm.parseRawGrammar(data.toString(), "go.json"))
         }
         console.log(`Unknown scope name: ${scopeName}`);
@@ -71,7 +70,7 @@ func main() {
                 scopes: token.scopes
             })
 
-            console.log(`<${value}>  ${token.scopes.join(",")}`)
+            // console.log(`| pos | ${value} | ${token.scopes.join(",")} |`)
         }
         ruleStack = lineTokens.ruleStack;
     }
